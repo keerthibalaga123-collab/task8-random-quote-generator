@@ -1,0 +1,199 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    min-height: 100vh;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: linear-gradient(135deg, #667eea, #764ba2);
+
+    padding: 20px;
+}
+
+.container {
+    width: 100%;
+    max-width: 700px;
+}
+
+.quote-card {
+    background: white;
+
+    padding: 45px 40px;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.25);
+
+    animation: fadeIn 0.8s ease;
+}
+
+.quote-card h1 {
+    color: #333;
+
+    margin-bottom: 30px;
+
+    font-size: 32px;
+}
+
+.quote-box {
+    background: #f5f3ff;
+
+    padding: 35px 25px;
+
+    border-radius: 18px;
+
+    margin-bottom: 30px;
+
+    min-height: 220px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+}
+
+.quote-icon {
+    font-size: 55px;
+
+    color: #764ba2;
+
+    line-height: 1;
+
+    margin-bottom: 15px;
+}
+
+#quote {
+    font-size: 24px;
+
+    line-height: 1.6;
+
+    color: #333;
+
+    font-style: italic;
+
+    margin-bottom: 20px;
+}
+
+#author {
+    color: #667eea;
+
+    font-size: 18px;
+}
+
+.buttons {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 15px;
+
+    flex-wrap: wrap;
+}
+
+button {
+    border: none;
+
+    padding: 14px 25px;
+
+    border-radius: 10px;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: all 0.3s ease;
+}
+
+#newQuoteBtn {
+    background: #667eea;
+
+    color: white;
+}
+
+#newQuoteBtn:hover {
+    background: #5568d9;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 15px rgba(102, 126, 234, 0.3);
+}
+
+#shareBtn {
+    background: #764ba2;
+
+    color: white;
+}
+
+#shareBtn:hover {
+    background: #633d87;
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 15px rgba(118, 75, 162, 0.3);
+}
+
+button:active {
+    transform: scale(0.95);
+}
+
+footer {
+    text-align: center;
+
+    margin-top: 20px;
+
+    color: white;
+
+    font-size: 14px;
+}
+
+@keyframes fadeIn {
+
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 600px) {
+
+    .quote-card {
+        padding: 30px 20px;
+    }
+
+    .quote-card h1 {
+        font-size: 26px;
+    }
+
+    #quote {
+        font-size: 20px;
+    }
+
+    .quote-box {
+        padding: 25px 15px;
+    }
+
+    button {
+        width: 100%;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+}
